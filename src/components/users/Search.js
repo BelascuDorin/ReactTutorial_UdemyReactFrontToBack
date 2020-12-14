@@ -7,12 +7,11 @@ class Search extends Component {
 
     onSubmit = (e) => {
         e.preventDefault(); // prevent to submit to a file
-        console.log(this.state.text);
+        this.props.searchUsers(this.state.text);
+        this.setState({ text: ''});
     }
 
     onChange = (e) => this.setState({ [e.target.name]: e.target.value });
-
-
 
     render() {
         return (
