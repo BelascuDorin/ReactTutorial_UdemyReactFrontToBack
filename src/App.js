@@ -3,6 +3,7 @@ import axios from 'axios';
 
 import Navbar from './components/layout/Navbar';
 import Users from './components/users/Users';
+import Search from './components/users/Search';
 import './App.css';
 
 class App extends Component{
@@ -25,6 +26,7 @@ class App extends Component{
       <div className='App'>
         <Navbar/>
         <div className="container">
+          <Search/>
           <Users loading={this.state.loading} users={this.state.users}/>
         </div>
       </div>
