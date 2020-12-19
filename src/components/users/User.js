@@ -10,6 +10,9 @@ const  User = ({ user, loading, getUser, getUserRepos, repos, match}) =>  {
     useEffect(() => {
         getUser(match.params.login);
         getUserRepos(match.params.login);
+        //For the warnings, we don`t want to add dependencies as they would get us in infinite loop
+
+        // eslint-disable-next-line  
     }, []); // [] -> enumerate the properties it should run for when they change
 
     const {
